@@ -8,7 +8,7 @@ from typing import Any
 import PyPDF2 as pdf
 import google.generativeai as genai
 import streamlit as st
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 
 class ResumeEvaluator:
     """
