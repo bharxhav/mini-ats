@@ -2,7 +2,7 @@
 mini-ats
 """
 
-import os
+# import os
 from typing import Any
 
 import PyPDF2 as pdf
@@ -84,5 +84,5 @@ def main():
 
 
 if __name__ == "__main__":
-    load_dotenv()
+    # load_dotenv()
     main()
