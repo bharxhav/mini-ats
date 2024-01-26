@@ -19,7 +19,8 @@ class ResumeEvaluator:
         """
         Initializes the ResumeEvaluator class and configures the Gemini API key.
         """
-        genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+        # genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+        genai.configure(api_key=st.secrets["GOOGLE_API_KEY"])
 
     def get_gemini_response(self, input_text: str) -> str:
         """
