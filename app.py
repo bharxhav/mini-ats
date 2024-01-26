@@ -47,8 +47,7 @@ class ResumeEvaluator:
         """
         reader = pdf.PdfReader(uploaded_file)
         text = ""
-        for page in range(len(reader.pages)):
-            page = reader.pages[page]
+        for _, page in enumerate(reader.pages):
             text += str(page.extract_text())
         return text
 
