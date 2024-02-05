@@ -72,6 +72,11 @@ def main():
             Act like a skilled or very experienced ATS (Application Tracking System) with a deep understanding of data science and all related fields, data analyst, machine learning engineering and big data engineer. Your task is to evaluate the resume based on the given job description. You must consider the job market is very competitive and you should provide best assistance for improving the resumes. Assign the percentage Matching based on Jd and the missing keywords, and related keywords with high accuracy.
             resume: {resume_text}
             description: {jd}
+
+            Missing Keywords: These are keywords that are blatantly mentioned.
+            Hidden Keywords: These are keywords that are not mentioned, but described.
+            Good To Have: These are keywords that you believe will set me apart from other candidates.
+            Profile Summary: Give a short passage of areas of fit, and if any areas of lacking.
         
             I want the response in one single string having the structure \
             {{\n
@@ -80,7 +85,7 @@ def main():
                 "Hidden Keywords" : [], \n
                 "Good To Have Keywords : [], \n
                 "Profile Summary" : "" \n
-                }}
+            }}
             """
 
             response = resume_evaluator.get_gemini_response(input_prompt)
